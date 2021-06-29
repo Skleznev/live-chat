@@ -44,6 +44,11 @@ function App() {
         }
     },[])
 
+    /**
+     * HandleClick for login/logon button.
+     * @constructor
+     * @param {object} message - The message
+     */
     const sendMessage = (message) => {
         if (db){
             db.collection('chat').add({
@@ -54,6 +59,10 @@ function App() {
         }
     }
 
+    /**
+     * HandleClick for login/logon button.
+     * @constructor
+     */
     const handleClick = () => {
         if (getUser()) {
             removeUserSession()
@@ -69,6 +78,10 @@ function App() {
         setUser(event.target.value)
     }
 
+    /**
+     * Choose text for login/logon button.
+     * @constructor
+     */
     const chooseText = () => {
         if (getUser())
             return "Выход"
